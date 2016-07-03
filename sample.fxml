@@ -18,9 +18,9 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <FlowPane hgap="5.0" prefHeight="311.0" prefWidth="313.0" vgap="8.0">
+      <FlowPane id="errorOut" hgap="5.0" prefHeight="311.0" prefWidth="313.0" vgap="8.0">
          <children>
-            <Label prefHeight="17.0" prefWidth="314.0" text="Enter X values and Y values below to validate your triangle" textFill="#6f0606" />
+            <Label prefHeight="17.0" prefWidth="314.0" text="Enter X values and Y values below to validate your triangle" textFill="#296f3a"/>
             <TextField id="side1" fx:id="side1" layoutX="20.0" layoutY="74.0" prefHeight="25.0" prefWidth="292.0" promptText="Side1" />
             <TextField id="side2" fx:id="side2" layoutX="20.0" layoutY="124.0" prefHeight="25.0" prefWidth="293.0" promptText="Side2" />
             <TextField id="side3" fx:id="side3" prefHeight="28.0" prefWidth="294.0" promptText="  Side3">
@@ -28,8 +28,9 @@
                   <Insets top="10.0" />
                </padding>
             </TextField>
-            <Text id="outputText" fx:id="outputText" fill="#1939ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="143.13671875" />
+            <Text id="outputText" fx:id="outputText" fill="#1939ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Output" wrappingWidth="143.13671875" />
             <Button fx:id="checkS" mnemonicParsing="false" onAction="#checkSides" prefHeight="44.0" prefWidth="314.0" text="CheckSides" wrapText="true" />
+            <Text id="errorOut" fx:id="errorOut" fill="#9e0707" layoutX="20.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="143.13671875" />
          </children>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

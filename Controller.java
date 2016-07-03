@@ -5,12 +5,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
-import javax.swing.*;
+
 
 public class Controller {
     public static boolean isValid(double side1, double side2, double side3) {
-        //double[] sideCycle = {side1, side2, side3};
-
         if(side1 + side2 < side3 | side2 + side3 < side1 |
                 side3 + side1 < side2) {
         return false;
@@ -27,6 +25,7 @@ public class Controller {
     @FXML private TextField side2;
     @FXML private TextField side3;
     @FXML private Text outputText;
+    @FXML private Text errorOut;
     // Xs from action^
     static double side1Calc;
     static double side2Calc;
@@ -39,7 +38,7 @@ public class Controller {
             side2Calc = Double.parseDouble(side2.getText());
             side3Calc = Double.parseDouble(side3.getText());
         }catch(NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "Error! must input all values!");
+            errorOut.setText("Error! Fill all boxes");
         }
         //pulled X values ^
         if(!isValid(side1Calc, side2Calc, side3Calc)) {
