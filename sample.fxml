@@ -20,7 +20,7 @@
    <children>
       <FlowPane hgap="5.0" prefHeight="311.0" prefWidth="313.0" vgap="8.0">
          <children>
-            <Label prefHeight="17.0" prefWidth="314.0" text="Enter X values and Y values below to validate your triangle" />
+            <Label prefHeight="17.0" prefWidth="314.0" text="Enter X values and Y values below to validate your triangle" textFill="#6f0606" />
             <TextField id="side1" fx:id="side1" layoutX="20.0" layoutY="74.0" prefHeight="25.0" prefWidth="292.0" promptText="Side1" />
             <TextField id="side2" fx:id="side2" layoutX="20.0" layoutY="124.0" prefHeight="25.0" prefWidth="293.0" promptText="Side2" />
             <TextField id="side3" fx:id="side3" prefHeight="28.0" prefWidth="294.0" promptText="  Side3">
