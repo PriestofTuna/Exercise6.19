@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import javax.swing.*;
+
 public class Controller {
     public static boolean isValid(double side1, double side2, double side3) {
         //double[] sideCycle = {side1, side2, side3};
@@ -32,9 +34,13 @@ public class Controller {
     //Xs ^ Ys v
     @FXML
     public void checkSides(ActionEvent actionEvent) {
-        side1Calc = Double.parseDouble(side1.getText());
-        side2Calc = Double.parseDouble(side2.getText());
-        side3Calc = Double.parseDouble(side3.getText());
+        try {
+            side1Calc = Double.parseDouble(side1.getText());
+            side2Calc = Double.parseDouble(side2.getText());
+            side3Calc = Double.parseDouble(side3.getText());
+        }catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Error! must input all values!");
+        }
         //pulled X values ^
         if(!isValid(side1Calc, side2Calc, side3Calc)) {
             outputText.setText("Invalid");
